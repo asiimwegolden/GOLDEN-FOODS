@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GOLDEN FOODS | Smart Food-Industry Investments</title>
+<style>
+:root{--gold:#f5b928;--gold2:#ffd66b;--bg:#050505;--panel:#101214;--panel2:#17191c;--text:#f7f7f7;--muted:#a9adb4;--line:#2b2e33}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+a{text-decoration:none;color:inherit}.container{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(5,5,5,.94);backdrop-filter:blur(12px);border-bottom:1px solid #252525}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.3px}.mark{width:42px;height:42px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:20px}.logo small{display:block;color:var(--muted);font-size:9px;font-weight:500}
+nav{display:flex;gap:25px;color:#ddd;font-size:14px}nav a:hover,nav a.active{color:var(--gold)}
+.actions{display:flex;gap:10px}.btn{border:1px solid var(--gold);padding:11px 18px;border-radius:10px;background:transparent;color:white;font-weight:700;cursor:pointer}.btn.primary{background:linear-gradient(135deg,var(--gold),#ffe18a);color:#111;border:0}.btn:hover{transform:translateY(-1px)}
+.hero{min-height:610px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:35px;background:radial-gradient(circle at 80% 35%,#49350c 0,#171207 22%,transparent 48%)}
+.badge{display:inline-block;border:1px solid #7c621e;color:var(--gold2);background:#171207;padding:7px 12px;border-radius:30px;font-size:12px;margin-bottom:18px}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.02;margin-bottom:20px}h1 span,h2 span{color:var(--gold)}
+.hero p{color:var(--muted);max-width:570px;font-size:17px}.hero-buttons{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.hero-art{min-height:450px;border:1px solid #4c3b12;border-radius:28px;overflow:hidden;background:linear-gradient(145deg,#111,#30220b);display:flex;align-items:end;padding:30px;position:relative}
+.hero-art:before{content:"GOLDEN\\A FOODS";white-space:pre;position:absolute;inset:35px;font-size:74px;font-weight:900;line-height:.9;color:rgba(255,209,75,.08)}
+.food{position:relative;width:100%;padding:32px;border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(0,0,0,.75));border:1px solid #6b541b}
+.food h3{font-size:25px;color:var(--gold)}.food p{font-size:13px;margin-top:5px}
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0a0b0c}.statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px}.stat{padding:25px;text-align:center}.stat b{display:block;font-size:23px;color:var(--gold)}.stat small{color:var(--muted)}
+section{padding:80px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px}.section-head h2{font-size:38px}.section-head p{color:var(--muted);max-width:620px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:linear-gradient(145deg,#121416,#090a0b);border:1px solid var(--line);border-radius:18px;padding:22px;position:relative}.card.featured{border-color:var(--gold);box-shadow:0 0 30px rgba(245,185,40,.08)}.tag{position:absolute;right:15px;top:15px;background:var(--gold);color:#111;border-radius:20px;padding:4px 8px;font-size:10px;font-weight:800}.icon{font-size:25px;color:var(--gold)}.card h3{margin:10px 0}.price{font-size:25px;font-weight:900;margin:15px 0}.card ul{list-style:none;color:var(--muted);font-size:13px;margin:15px 0}.card li{margin:8px 0}.card li:before{content:"✓";color:var(--gold);margin-right:8px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.panel{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:32px}.steps{display:grid;gap:16px}.step{display:flex;gap:15px}.num{width:36px;height:36px;min-width:36px;border-radius:50%;background:#211a09;color:var(--gold);display:grid;place-items:center;border:1px solid #66501a}.step p{color:var(--muted);font-size:14px}
+.mobilemoney{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}.mm{padding:18px;border-radius:14px;border:1px solid var(--line);background:#0d0e10}.mm strong{color:var(--gold)}
+.cta{background:linear-gradient(100deg,#1b1405,#302108);border:1px solid #6d5417;border-radius:24px;padding:45px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+footer{border-top:1px solid var(--line);padding:35px 0;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px}
+.page{display:none}.page.active{display:block}
+.packages-hero{padding:85px 0 40px}.packages-hero h1{font-size:52px}.notice{margin:25px 0;padding:15px 18px;border-left:3px solid var(--gold);background:#151208;color:#c8c8c8;font-size:13px}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:50;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modal-box{width:min(470px,100%);background:#111315;border:1px solid #5b4718;border-radius:20px;padding:28px}.modal-box h3{margin-bottom:15px}.field{margin:13px 0}.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}.field input,.field select{width:100%;padding:13px;border-radius:10px;border:1px solid #34373b;background:#08090a;color:#fff}.close{float:right;background:none;border:0;color:#aaa;font-size:22px;cursor:pointer}
+@media(max-width:850px){nav{display:none}.hero,.split{grid-template-columns:1fr}.hero{padding:55px 0}.cards{grid-template-columns:repeat(2,1fr)}.statgrid{grid-template-columns:repeat(2,1fr)}.cta{display:block}.cta .btn{margin-top:20px}.packages-hero h1{font-size:42px}}
+@media(max-width:520px){.cards{grid-template-columns:1fr}.mobilemoney{grid-template-columns:1fr}.actions .btn:first-child{display:none}.nav{height:64px}.hero-art{min-height:330px}}
+</style>
+</head>
+<body>
+<header><div class="container nav">
+<a href="#home" class="logo" onclick="showPage('home')"><div class="mark">GF</div><div>GOLDEN FOODS<small>INVEST • GROW • BUILD</small></div></a>
+<nav><a href="#home" class="active" onclick="showPage('home')">Home</a><a href="#packages" onclick="showPage('packages')">Investment Plans</a><a href="#how" onclick="showPage('home')">How It Works</a><a href="#about" onclick="showPage('home')">About</a></nav>
+<div class="actions"><button class="btn" onclick="openModal('login')">Login</button><button class="btn primary" onclick="openModal('signup')">Create Account</button></div>
+</div></header>
+
+<main>
+<div id="home" class="page active">
+<section class="hero"><div class="container" style="display:contents"><div>
+<span class="badge">FOOD INDUSTRY • INVESTMENT PLATFORM</span>
+<h1>Invest in a <span>Golden</span> Future.</h1>
+<p>GOLDEN FOODS connects members with structured opportunities in the food and agriculture value chain, with a simple digital account and Mobile Money funding.</p>
+<div class="hero-buttons"><button class="btn primary" onclick="showPage('packages')">Explore Plans →</button><button class="btn" onclick="document.getElementById('how').scrollIntoView()">How It Works</button></div>
+</div><div class="hero-art"><div class="food"><h3>Golden Foods</h3><p>Building value through food, agriculture and responsible investment.</p></div></div></div></section>
+
+<div class="stats"><div class="container statgrid"><div class="stat"><b>24/7</b><small>Account access</small></div><div class="stat"><b>UGX</b><small>Local currency</small></div><div class="stat"><b>Mobile</b><small>Money funding</small></div><div class="stat"><b>Secure</b><small>Account controls</small></div></div></div>
+
+<section><div class="container"><div class="section-head"><div><h2>Investment <span>Plans</span></h2><p>Choose a plan that fits your budget. Actual returns should be based on verified business performance and your signed investment terms.</p></div><button class="btn" onclick="showPage('packages')">View All Plans →</button></div><div class="cards" id="homePlans"></div></div></section>
+
+<section id="how"><div class="container split"><div class="panel"><h2>Fund with <span>Mobile Money</span></h2><p style="color:var(--muted);margin-top:10px">A convenient funding experience designed for supported Mobile Money providers. Payment confirmation should be verified by the platform before balances are updated.</p><div class="mobilemoney"><div class="mm"><strong>MTN Mobile Money</strong><br><small>Deposit support</small></div><div class="mm"><strong>Airtel Money</strong><br><small>Deposit support</small></div></div><button class="btn primary" style="margin-top:20px" onclick="openModal('deposit')">Start a Deposit</button></div><div class="steps"><div class="step"><div class="num">1</div><div><b>Create your account</b><p>Register and complete the required account information.</p></div></div><div class="step"><div class="num">2</div><div><b>Fund your wallet</b><p>Use a supported Mobile Money method.</p></div></div><div class="step"><div class="num">3</div><div><b>Select an opportunity</b><p>Review terms, risks, duration and fees before committing funds.</p></div></div><div class="step"><div class="num">4</div><div><b>Track performance</b><p>Monitor your investment and transaction history from your account.</p></div></div></div></div></section>
+
+<section id="about"><div class="container"><div class="cta"><div><h2>Build with <span>GOLDEN FOODS</span></h2><p style="color:#ccc">A premium digital experience for a transparent food-industry investment business.</p></div><button class="btn primary" onclick="openModal('signup')">Create Account →</button></div></div></section>
+</div>
+
+<div id="packages" class="page">
+<section class="packages-hero"><div class="container"><span class="badge">GOLDEN FOODS</span><h1>Investment <span>Packages</span></h1><p style="color:var(--muted);max-width:700px">Select an opportunity after reviewing its minimum contribution, duration, risks, fees and expected performance.</p><div class="notice">Important: the figures shown below are example package structures for the website prototype, not guaranteed returns or a solicitation to invest. Final terms should be based on your real business model and applicable Ugandan requirements.</div></div></section>
+<section style="padding-top:20px"><div class="container"><div class="cards" id="allPlans"></div></div></section>
+<section><div class="container panel"><h2>How it <span>works</span></h2><div class="steps" style="margin-top:25px;grid-template-columns:repeat(4,1fr)"><div class="step"><div class="num">1</div><div><b>Register</b><p>Create your secure account.</p></div></div><div class="step"><div class="num">2</div><div><b>Deposit</b><p>Fund through supported Mobile Money.</p></div></div><div class="step"><div class="num">3</div><div><b>Choose</b><p>Review and accept the plan terms.</p></div></div><div class="step"><div class="num">4</div><div><b>Track</b><p>Monitor your account and reports.</p></div></div></div></div></section>
+<section><div class="container"><div class="cta"><div><h2>Start your <span>journey</span></h2><p style="color:#ccc">Create an account to explore the platform.</p></div><button class="btn primary" onclick="openModal('signup')">Create Account →</button></div></div></section>
+</div>
+</main>
+
+<footer><div class="container foot"><div><b style="color:var(--gold)">GOLDEN FOODS</b><br>Invest • Grow • Build</div><div>© 2026 Golden Foods. Prototype interface.</div><div>Terms • Privacy • Support</div></div></footer>
+
+<div class="modal" id="modal"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+
+<script>
+const plans=[
+{name:"Starter Plan",icon:"🌱",min:"UGX 20,000",duration:"7 Days",note:"Entry-level opportunity"},
+{name:"Silver Plan",icon:"🌿",min:"UGX 50,000",duration:"14 Days",note:"Intermediate opportunity"},
+{name:"Gold Plan",icon:"🌾",min:"UGX 100,000",duration:"30 Days",note:"Growth opportunity"},
+{name:"Diamond Plan",icon:"💎",min:"UGX 250,000",duration:"60 Days",note:"Premium opportunity"}
+];
+function card(p,i){return `<article class="card ${i===2?'featured':''}">${i===2?'<span class="tag">POPULAR</span>':''}<div class="icon">${p.icon}</div><h3>${p.name}</h3><div class="price">${p.min}</div><ul><li>Duration: ${p.duration}</li><li>${p.note}</li><li>Mobile Money supported</li><li>Performance subject to business results</li></ul><button class="btn primary" style="width:100%" onclick="openModal('invest','${p.name}')">Review & Invest</button></article>`}
+document.getElementById('homePlans').innerHTML=plans.map(card).join('');
+document.getElementById('allPlans').innerHTML=plans.map(card).join('');
+function showPage(id){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});document.querySelectorAll('nav a').forEach(x=>x.classList.remove('active'));if(id==='packages')document.querySelector('nav a[href="#packages"]').classList.add('active')}
+function openModal(type,plan){
+let c='';
+if(type==='signup')c=`<h3>Create your GOLDEN FOODS account</h3><div class="field"><label>Full name</label><input placeholder="Your full name"></div><div class="field"><label>Phone number</label><input placeholder="+256 7XX XXX XXX"></div><div class="field"><label>Password</label><input type="password" placeholder="Create password"></div><button class="btn primary" style="width:100%">Create Account</button>`;
+if(type==='login')c=`<h3>Welcome back</h3><div class="field"><label>Phone number</label><input placeholder="+256 7XX XXX XXX"></div><div class="field"><label>Password</label><input type="password"></div><button class="btn primary" style="width:100%">Login</button>`;
+if(type==='deposit')c=`<h3>Mobile Money Deposit</h3><p style="color:#aaa;font-size:13px">Prototype payment screen. Connect a licensed payment provider before accepting real deposits.</p><div class="field"><label>Provider</label><select><option>MTN Mobile Money</option><option>Airtel Money</option></select></div><div class="field"><label>Amount (UGX)</label><input type="number" placeholder="20,000"></div><div class="field"><label>Mobile number</label><input placeholder="+256 7XX XXX XXX"></div><button class="btn primary" style="width:100%">Continue to Payment</button>`;
+if(type==='invest')c=`<h3>${plan}</h3><p style="color:#aaa">Review the full investment agreement, risk disclosure, fees and performance methodology before committing funds.</p><div class="field"><label>Amount (UGX)</label><input type="number" placeholder="Enter amount"></div><button class="btn primary" style="width:100%">Continue</button>`;
+document.getElementById('modalContent').innerHTML=c;document.getElementById('modal').classList.add('show')}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+</script>
+</body>
+</html>
